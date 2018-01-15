@@ -95,4 +95,15 @@ public class MusicOrganizer
             posicion++;
         }
     }
+    /**
+     * Metodo que seleciona archivos solicitados por parametro
+     */
+    public void listMatching(String archivoABuscar)
+    {
+        for(String nombreArchivo : files){
+            if(nombreArchivo.contains(archivoABuscar)){
+                System.out.println(nombreArchivo);
+            }
+        }
+    }
 }
