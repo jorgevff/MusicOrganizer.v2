@@ -113,4 +113,23 @@ public class MusicOrganizer
             System.out.println("No se ha encontrado ningun resultado de busqueda");
         }
     }
+    
+    /**
+     * Metodo que reproduce todas las  canciones de un artista en concreto
+     */
+    
+    public void playAllArtist(String artista)
+    {
+        boolean artistaEncontrado = false;
+        for(String nombreArchivo : files){
+            if(nombreArchivo.contains(artista)){
+                player.playSample(nombreArchivo);
+                artistaEncontrado = true;
+            }
+            
+        }
+        if(artistaEncontrado == false){
+            System.out.println("No hay canciones disponibles de: " + artista);
+        }
+    }
 }
