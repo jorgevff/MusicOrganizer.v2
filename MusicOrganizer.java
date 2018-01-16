@@ -132,4 +132,27 @@ public class MusicOrganizer
             System.out.println("No hay canciones disponibles de: " + artista);
         }
     }
+    
+    /**
+     * Metodo que busca el primer indice del archivo que corresponda al texto 
+     * introducido por parametro
+     */
+    public int findFirst(String archivoABuscar)
+    {
+        int indice = 0;
+        boolean buscando = true;
+        while (indice < files.size() && buscando){
+            //se crea una variable local para ir guardando los archivos
+            String archivo = files.get(indice);
+            if(archivo.contains(archivoABuscar)){
+                buscando = false;
+            }
+            indice++;
+        }
+        if(buscando){
+            indice = -1;
+        }
+        
+        return indice;
+    }
 }
