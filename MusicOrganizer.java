@@ -100,10 +100,17 @@ public class MusicOrganizer
      */
     public void listMatching(String archivoABuscar)
     {
+        boolean archivoEncontrado = false;
         for(String nombreArchivo : files){
             if(nombreArchivo.contains(archivoABuscar)){
                 System.out.println(nombreArchivo);
+                archivoEncontrado = true;
+                
             }
+            
+        }
+        if(archivoEncontrado == false){
+            System.out.println("No se ha encontrado ningun resultado de busqueda");
         }
     }
 }
