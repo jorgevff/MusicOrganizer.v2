@@ -141,7 +141,8 @@ public class MusicOrganizer
     {
         int indice = 0;
         boolean buscando = true;
-        while (indice < files.size() && buscando){
+        int totalArchivos = files.size();
+        while (indice < totalArchivos && buscando){
             //se crea una variable local para ir guardando los archivos
             String archivo = files.get(indice);
             if(archivo.contains(archivoABuscar)){
